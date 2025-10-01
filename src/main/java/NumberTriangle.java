@@ -88,8 +88,18 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-        // TODO implement this method
-        return -1;
+        NumberTriangle currentNode = this;
+        // Iterate through each character in the path string to navigate the triangle.
+        for (int i = 0; i < path.length(); i++) {
+            char direction = path.charAt(i);
+            if (direction == 'l') {
+                currentNode = currentNode.left;
+            } else { // 'r'
+                currentNode = currentNode.right;
+            }
+        }
+        // Return the value of the node at the end of the path.
+        return currentNode.getRoot();
     }
 
     /** Read in the NumberTriangle structure from a file.
