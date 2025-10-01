@@ -121,7 +121,7 @@ public class NumberTriangle {
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
 
 
-        List<NumberTriangle> prev = null;
+        List<NumberTriangle> previousRowNodes = previousRowNodes = new ArrayList<>();
 
         // will need to return the top of the NumberTriangle,
         // so might want a variable for that.
